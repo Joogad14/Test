@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let editingMovies;
+         
+//MOVIES COLLECTION
+        let movies = [{
+           title: 'God Father',
+           director: 'Tunde',
+           yearReleased: 2020
+        },
+        {
+           title: 'Labisi',
+           director: 'Debimpe',
+           yearReleased: 2024
+        },
+        {
+           title: 'Waramm',
+           director: 'Parabas',
+           yearReleased: 2023
+        },
+        {
+           title: 'Cruise',
+           director: 'Wale',
+           yearReleased: 2010
+        },
+        {
+           title: 'One Mouth',
+           director: 'Ilesanmi',
+           yearReleased: 2016
+        },
+        {
+           title: 'Anything Good',
+           director: 'Right',
+           yearReleased: 2012
+        }
+    ]
+    console.log(movies);
+
+    const addMovies = (title, director, yearReleased) => {
+        let newMovie = {
+            title: title,
+           director: director,
+           yearReleased: year
+    }
+    movies.push(newMovie);
+    console.log(`${title} has been added.`);
+    console.log(`${director} has been added.`);
+    console.log(`${yearReleased} has been added.`);
+}
+const getAllMovies = () => {
+    console.log(movies);
+}
+
+const editMovies = (movies) => {
+    let editedMovies = {
+        title: newTitle,
+        director: newDirector,
+        yearReleased: newYear
+        }
+        console.log(editedMovies);
+        movies.splice(editingMovies,1,editedMovies)
+}
+
+const deleteIt = (index) => {
+    let confamation = confirm("Are you sure you want to delete? This action is irreversible, you fit cry")
+    if (confamation === true) {
+        console.log(index);
+        movies.splice(index, 1)
+        console.log(movies);
+           
+        }else {
+            console.log(movies);
+            
+        }
+}
+    </script>
+</body>
+</html>
